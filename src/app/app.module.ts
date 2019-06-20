@@ -10,8 +10,9 @@ import { AuthService } from './auth.service'
 import { AuthInterceptorService } from './authInterceptor.service'
 
 const routes = [
+  { path: 'contactmanager', loadChildren: './contactmanager/contactmanager.module#ContactmanagerModule' },
   { path: 'demo', loadChildren: './demo/demo.module#DemoModule' },
-  { path: '**', redirectTo: 'demo' }
+  { path: '**', redirectTo: 'contactmanager' }
 ]
 
 @NgModule({
